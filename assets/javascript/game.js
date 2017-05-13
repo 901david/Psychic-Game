@@ -5,7 +5,8 @@ var alphabetChoices = ["a","b","c","d","e","f","g","h",
 						"y","z"];
 // Variables that need to be defined
 var wins = 0;
-var guesses = 8;
+var guesses = 5;
+var losses = 0;
 
 //This dictates the users input
 document.onkeyup = function(event){
@@ -16,22 +17,26 @@ document.onkeyup = function(event){
 
 	//Computer Randomizer Sequence
 	var computerGuess = alphabetChoices [Math.floor(Math.random()
-		*alphabetChoices.length)];
+		* alphabetChoices.length)];
 	console.log(computerGuess);
 
 	if (userGuess === computerGuess) {
 		wins++;
 		alert("You win!! You guessed the letter " + userGuess + "IS what I was thinking of");
-		else if (userGuess !=== computerGuess)
-			guesses--;
-		
-		else 
-			alert("I don't think you made a valid selection.")
 		}
-	if (guesses <= 0) {
+		else {
+			guesses--;
+			alert("That Wasn't it try again.")
+			console.log(guesses);
+			console.log(wins);
+		}
+		
+		if (guesses <= 0) {
 		alert("You lose!!! Try Again");
+		
+	}
 	}
 	// This is where I put the HTML modification code
-	}
+	
 
-	}
+	
