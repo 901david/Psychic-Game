@@ -7,7 +7,7 @@ var alphabetChoices = ["a","b","c","d","e","f","g","h",
 var wins = 0;
 var guesses = 9;
 var losses = 0;
-var displayLetter = "Your guesses so far: ";
+var displayLetter = "";
 var computerGuess;
 compNum();
 //Computer Randomizer Sequence
@@ -26,12 +26,16 @@ function compNum() {
 	console.log(userGuess);
 	for (var i = 0; i < alphabetChoices.length; i++) {
 		if (userGuess === alphabetChoices[i]) {
+			if (displayLetter.includes(userGuess)) {
+				alert("You already chose that letter");
+			}
+			else {
 			if (userGuess === computerGuess) {
 				wins++;
 				alert("You win!! You guessed the letter " + userGuess + " and that IS what I was thinking of");
 				console.log(wins);
 				guesses = 9;
-				displayLetter = "Your guesses so far: ";
+				displayLetter = "";
 				compNum();
 			}
 
@@ -48,7 +52,7 @@ function compNum() {
 				losses++;
 				guesses = 9;
 				compNum();
-				displayLetter = "Your guesses so far: ";
+				displayLetter = "";
 			}
 			
 
@@ -61,6 +65,7 @@ function compNum() {
 	document.querySelector("#displayHtml").innerHTML = html;
 	typedLetter = true;
 break;
+}
 }
 
 }
