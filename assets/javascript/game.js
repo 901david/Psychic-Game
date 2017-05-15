@@ -28,6 +28,7 @@ function compNum() {
 		if (userGuess === alphabetChoices[i]) {
 			if (displayLetter.includes(userGuess)) {
 				alert("You already chose that letter");
+				typedLetter = true;
 			}
 			else {
 			if (userGuess === computerGuess) {
