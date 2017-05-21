@@ -1,5 +1,4 @@
 .justForFun {
-	text-align: center;
 	font-size: 24px;
 	line-height: 35px;
 	color:cornflowerblue;
@@ -9,4 +8,8 @@
 }
 body {
 	background-color:#c2fcf3; 
+}
+.sidePic {
+	width: 300px;
+	height:auto;
 }

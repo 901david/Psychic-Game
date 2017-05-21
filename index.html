@@ -5,22 +5,37 @@
 	<link rel="icon" type="image/jpg" href="#">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 	<script rel="javascript" type="text/javascript" src="assets/javascript/game.js"></script>
 	<title>The Psychic Game</title>
 </head>
 <body>
-
-	<div id="displayHtml" class="justForFun">
-		<h1>The Psychic Game</h1>
+	<div class="container">
+	<div class="row">
+	<div class="col-xs-12 col-s-12 col-md-4 col-lg-4">
+	<img class="sidePic" src="assets/images/cleohappy.jpg" alt="Cleo">
+	<audio class="soundControl" autoplay></audio>
+	<div class="justForFun">
+	<p>Your guesses so far: <p id="displayLetter"></p></p>
+	</div>
+	</div>
+	<h1>The Psychic Game</h1>
+	<p>Miss Cleo is thinking of a letter, see if you can go psychic on her!!</p> <p>Choose letters with the keyboard.</p>
+	<div id="displayHtml" class="col-xs-12 col-s-12 col-md-4 col-lg-4 justForFun">
+		
 		<p>Guess the Letter!</p>
           <p>Wins: 0</p>
           <p>Losses: 0</p>
           <p>Gueses Left: 8</p>
           
 	</div>
-	<div class="justForFun">
-	<p>Your guesses so far: <p id="displayLetter"></p></p>
 	</div>
+	<div class="winnerOrLoser">
+	<div>
+	</div>
+	
 </body>
 </html>
